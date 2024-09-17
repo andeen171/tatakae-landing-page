@@ -1,7 +1,6 @@
-import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./HeroCards";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import {Button, buttonVariants} from "./ui/button";
+import {HeroCards} from "./HeroCards";
+import {GitHubLogoIcon} from "@radix-ui/react-icons";
 
 export const Hero = () => {
   return (
@@ -10,16 +9,16 @@ export const Hero = () => {
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shadcn
+              Tatakae
             </span>{" "}
-            landing page
-          </h1>{" "}
+            Software
+          </h1><br/>
           for{" "}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              React
-            </span>{" "}
-            developers
+            <span
+              className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
+              Business
+            </span>
           </h2>
         </main>
 
@@ -40,14 +39,14 @@ export const Hero = () => {
             })}`}
           >
             Github Repository
-            <GitHubLogoIcon className="ml-2 w-5 h-5" />
+            <GitHubLogoIcon className="ml-2 w-5 h-5"/>
           </a>
         </div>
       </div>
 
       {/* Hero cards sections */}
       <div className="z-10">
-        <HeroCards />
+        <HeroCards/>
       </div>
 
       {/* Shadow effect */}

@@ -1,22 +1,12 @@
-import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import {useState} from "react";
+import {NavigationMenu, NavigationMenuItem, NavigationMenuList,} from "@/components/ui/navigation-menu";
+import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger,} from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import {GitHubLogoIcon} from "@radix-ui/react-icons";
+import {buttonVariants} from "./ui/button";
+import {Menu} from "lucide-react";
+import {ModeToggle} from "./mode-toggle";
+import {LogoIcon} from "./Icons";
 
 interface RouteProps {
   href: string;
@@ -52,16 +42,16 @@ export const Navbar = () => {
             <a
               rel="noreferrer noopener"
               href="/"
-              className="ml-2 font-bold text-xl flex"
+              className="ml-2 font-bold text-xl flex items-center"
             >
-              <LogoIcon />
-              ShadcnUI/React
+              <LogoIcon/>
+              TATAKAE
             </a>
           </NavigationMenuItem>
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
+            <ModeToggle/>
 
             <Sheet
               open={isOpen}
@@ -83,13 +73,13 @@ export const Navbar = () => {
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, label }: RouteProps) => (
+                  {routeList.map(({href, label}: RouteProps) => (
                     <a
                       rel="noreferrer noopener"
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={buttonVariants({variant: "ghost"})}
                     >
                       {label}
                     </a>
@@ -102,7 +92,7 @@ export const Navbar = () => {
                       variant: "secondary",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
+                    <GitHubLogoIcon className="mr-2 w-5 h-5"/>
                     Github
                   </a>
                 </nav>
@@ -131,13 +121,13 @@ export const Navbar = () => {
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"
               target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+              className={`border ${buttonVariants({variant: "secondary"})}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
+              <GitHubLogoIcon className="mr-2 w-5 h-5"/>
               Github
             </a>
 
-            <ModeToggle />
+            <ModeToggle/>
           </div>
         </NavigationMenuList>
       </NavigationMenu>
